@@ -1,1 +1,5 @@
-/*  */
+.h-cont {
+    display: flex;
+    height: 35vh;
+    justify-content: center;
+}
