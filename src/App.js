@@ -1,13 +1,15 @@
 import './App.css';
+import Feed from './components/Feed';
 import Header from "./components/Header"
-import ThemeContextProvider from './contexts/themeContext';
+import Sidebar from './components/Sidebar';
+// import ThemeContextProvider from './contexts/themeContext';
 
 function App() {
   return (
     <div>
-      <ThemeContextProvider>
-        <Header />
-      </ThemeContextProvider>
+      <Header />
+      <Sidebar />
+      <Feed />
     </div>
   );
 }
