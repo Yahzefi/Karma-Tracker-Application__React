@@ -1,11 +1,18 @@
-// import React from 'react'
+import React from 'react'
 
-const Sidebar = () => {
+const Scale = () => {
     return (
-        <div>
-            <h1>Sidebar</h1>
+        <div className="scale-cont">
+            <div className="scale-box">
+                <div className="scale-fill">
+                    <p style={{textAlign: "center"}}>Progress</p>
+                </div>
+            </div>
+            <div className="scale-bar">
+
+            </div>
         </div>
     )
 }
 
-export default Sidebar
+export default Scale
