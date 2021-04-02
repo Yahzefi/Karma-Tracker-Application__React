@@ -64,10 +64,38 @@
             flex: 0.20;
             height: 55vh;
         }
+            .sidebar-head {
+                height: 25%;
+                width: 100%;
+                background-color: rgba(0,0,0,0.75);
+            }
+            .sidebar-content {
+                height: 75%;
+                width: 100%;
+                background-color: rgba(200, 0, 0, 0.75);
+            }
 
     .scale-cont {
         height: 15vh;
     }
+        .scale-box {
+            width: 75%;
+            height: 25%;
+            border: thin solid black;
+        }
+            .scale-fill {
+                height: 100%;
+                width: 90%;
+                background-color: red;
+            }
+        .scale-bar {
+            position: absolute;
+            left: 25%;
+            top: 25%;
+            width: 1%;
+            height: 5%;
+            background-color: black;
+        }
 
 @keyframes logoSpin {
     from {transform: rotate(0deg)}
