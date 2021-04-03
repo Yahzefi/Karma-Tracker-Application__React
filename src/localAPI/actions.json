@@ -1,0 +1,38 @@
+{
+    "Actions":
+    {
+        "Good": {
+            "One":
+            [
+                "Task One", "Task Two", "Task Three"
+            ],
+            "Two":
+            [
+                "Task One", "Task Two", "Task Three"
+            ],
+            "Three":
+            [
+                "Task One", "Task Two", "Task Three"
+            ]
+        },
+        "Neutral": [
+            "Task One",
+            "Task Two",
+            "Task Three"
+        ],
+        "Bad": {
+            "One":
+            [
+                "Task One", "Task Two", "Task Three"
+            ],
+            "Two":
+            [
+                "Task One", "Task Two", "Task Three"
+            ],
+            "Three":
+            [
+                "Task One", "Task Two", "Task Three"
+            ]
+        }
+    }
+}
