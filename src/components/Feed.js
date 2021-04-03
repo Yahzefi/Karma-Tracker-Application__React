@@ -2,8 +2,10 @@
 
 const Feed = () => {
     return (
-        <div>
-            <h2>Feed</h2>
+        <div className="feed-cont">
+            <div>
+                {/* In here will be a conditional return depending on the current location */}
+            </div>
         </div>
     )
 }
