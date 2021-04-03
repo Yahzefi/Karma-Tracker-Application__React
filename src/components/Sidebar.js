@@ -1,18 +1,22 @@
-import React from 'react'
+// import React from 'react'
 
-const Scale = () => {
+const Sidebar = () => {
     return (
-        <div className="scale-cont">
-            <div className="scale-box">
-                <div className="scale-fill">
-                    <p style={{textAlign: "center"}}>Progress</p>
-                </div>
+        <div className="sidebar-cont">
+            <div className="sidebar-head">
+                <h2>Chapter Select</h2>
             </div>
-            <div className="scale-bar">
-
+            <div className="sidebar-content">
+                {/* These will be links that connect with Feed.js */}
+                <p>Chapter One</p>
+                <p>Chapter Two</p>
+                <p>Chapter Three</p>
+                <p>Chapter Four</p>
+                <p>Chapter Five</p>
+                <p>Chapter Six</p>
             </div>
         </div>
     )
 }
 
-export default Scale
+export default Sidebar
