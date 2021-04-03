@@ -38,7 +38,7 @@
             font-size: 98px;
             letter-spacing: 24px;
             padding: 12px;
-            transition: font-size 200ms linear;
+            transition: font-size 100ms linear;
         }
         .h-logo {
             max-height: 25vh;
@@ -51,32 +51,48 @@
 
     .body-cont {
         display: flex;
+        min-height: 55vh;
         border: thin solid black;
     }
 
         .feed-cont {
             flex: 0.80;
-            height: 55vh;
+            background: linear-gradient(rgb(0,0,0), rgb(50, 50, 50));
         }
 
         .sidebar-cont {
             border-right: thin solid black;
             flex: 0.20;
-            height: 55vh;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(200,0,0,0.75))
         }
             .sidebar-head {
-                height: 25%;
+                height: 15%;
                 width: 100%;
-                background-color: rgba(0,0,0,0.75);
+                color: white;
+                text-align: center;
+                border-bottom: thin solid black;
             }
             .sidebar-content {
-                height: 75%;
+                display: grid;
+                font-size: 28px;
+                height: 85%;
                 width: 100%;
-                background-color: rgba(200, 0, 0, 0.75);
+                margin-top: 5%;
+                text-align: center;
+                
             }
+                .sidebar-content > p:hover {
+                    cursor: pointer;
+                    color: white;
+                    transition: color 200ms ease-out;
+                }
 
     .scale-cont {
+        display: flex;
         height: 15vh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
     }
         .scale-box {
             width: 75%;
@@ -85,26 +101,32 @@
         }
             .scale-fill {
                 height: 100%;
-                width: 90%;
-                background-color: red;
+                /* width: 90%; */
+                /* background-color: red; */
             }
         .scale-bar {
             position: absolute;
-            left: 25%;
-            top: 25%;
+            left: 50%;
+            top: 28.5%;
             width: 1%;
-            height: 5%;
+            height: 8%;
             background-color: black;
         }
+    .foot-cont {
+        display: flex;
+        height: 200px;
+        justify-content: center;
+        background-color: rgb(35, 35, 35);
+    }
 
 @keyframes logoSpin {
     from {transform: rotate(0deg)}
     to {transform: rotate(360deg)}
 }
 
-@media only screen and (max-width: 1680px){
+@media only screen and (max-width: 1700px){
     .h-title {
-        font-size: 24px;
+        font-size: 36px;
     }
     .h-nav {
         display: none;
