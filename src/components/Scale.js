@@ -1,17 +1,14 @@
+import { useState } from "react"
 
-const Scale = ({ karmaStatus }) => {
+const Section = ({ chapterName, actionNumber, actionName }) => {
+    const [isChecked, setChecked] = useState(false)
     return (
-        <div className="scale-cont">
-            <div className="scale-box">
-                <div className="scale-fill" style={karmaStatus <= 40 ? {backgroundColor: "red", width: `${karmaStatus}%`} : karmaStatus >= 40 && karmaStatus <= 60 ? {backgroundColor: "yellow", width: `${karmaStatus}%`} : {backgroundColor: 'green', width: `${karmaStatus}%`}}>
-                    <p style={{textAlign: "center"}}>Progress</p>
-                </div>
-            </div>
-            <div className="scale-bar">
-
-            </div>
+        <div className="item-cont" id={chapterName}>
+            <p className="item-num">{actionNumber}</p>
+            <p className="item-name">{actionName}</p>
+            <input className="act-check"  type="checkbox" onChange={()=>setChecked(!isChecked)} checked={isChecked}/>
         </div>
     )
 }
 
-export default Scale
+export default Section
