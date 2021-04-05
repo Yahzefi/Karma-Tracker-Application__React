@@ -59,6 +59,21 @@
             flex: 0.80;
             background: linear-gradient(rgb(0,0,0), rgb(50, 50, 50));
         }
+            .add-btn, .sub-btn {
+                width: 100px;
+                height: 25px;
+                margin: 12px;
+                border-radius: 24px;
+                outline: none;
+                border: none;
+                color: white;
+            }
+            .add-btn {
+                background-color: green;
+            }
+            .sub-btn {
+                background-color: red;
+            }
 
         .sidebar-cont {
             border-right: thin solid black;
@@ -81,12 +96,16 @@
                 text-align: center;
                 
             }
-                .sidebar-content > p:hover {
+            .sidebar-link {
+                color: grey;
+                text-decoration: none;
+            }
+                .sidebar-link:hover {
                     cursor: pointer;
                     color: white;
                     transition: color 200ms ease-out;
                 }
-
+            
     .scale-cont {
         display: flex;
         height: 15vh;
