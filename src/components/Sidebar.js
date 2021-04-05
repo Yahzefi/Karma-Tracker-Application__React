@@ -1,4 +1,5 @@
 // import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
     return (
@@ -8,12 +9,12 @@ const Sidebar = () => {
             </div>
             <div className="sidebar-content">
                 {/* These will be links that connect with Feed.js */}
-                <p>Chapter One</p>
-                <p>Chapter Two</p>
-                <p>Chapter Three</p>
-                <p>Chapter Four</p>
-                <p>Chapter Five</p>
-                <p>Chapter Six</p>
+                <Link to="/chapter_one" className="sidebar-link">Chapter One</Link>
+                <Link to="/chapter_two" className="sidebar-link">Chapter Two</Link>
+                <Link to="/chapter_three" className="sidebar-link">Chapter Three</Link>
+                <Link to="/chapter_four" className="sidebar-link">Chapter Four</Link>
+                <Link to="/chapter_five" className="sidebar-link">Chapter Five</Link>
+                <Link to="/chapter_six" className="sidebar-link">Chapter Six</Link>
             </div>
         </div>
     )
