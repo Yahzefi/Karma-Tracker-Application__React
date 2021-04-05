@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react"
-
 import './App.css';
+
+import { useEffect, useReducer, useState } from "react"
+import { BrowserRouter as Router, Route } from "react-router-dom"
+import { updateScore } from "./reducers/updateScore"
 
 import Modals from './components/Modals';
 import Header from "./components/Header";
@@ -11,30 +13,33 @@ import Footer from './components/Footer';
 // import ThemeContextProvider from './contexts/themeContext';
 
 function App() {
-  const [score, setScore] = useState(0)
+  const [score, setScore] = useReducer(updateScore, 50)
+  const [actions, setActions] = useState([])
   useEffect(()=>{
     const fetchData = async () => {
       const module = await import('./localAPI/actions.json')
       const data = module.Actions
-      console.log("Worth One Point: " + data.Good.One)
+      setActions(data)
     }
     fetchData()
   }, [])
   return (
+    <Router>
     <div className="primary-cont">
       <Modals />
       <Header />
       <div className="scale-cont">
-        <Scale />
+        <Scale karmaStatus={score}/>
       </div>
       <div className="body-cont">
         <Sidebar />
-        <Feed />
+        <Feed listItem={actions.map((act)=>(<li key={act.id} style={{color:"white"}}>{act.title}</li>))}/>
       </div>
       <>
         <Footer />
       </>
     </div>
+    </Router>
   );
 }
 
