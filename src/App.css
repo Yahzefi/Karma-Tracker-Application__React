@@ -59,21 +59,25 @@
             flex: 0.80;
             background: linear-gradient(rgb(0,0,0), rgb(50, 50, 50));
         }
-            .add-btn, .sub-btn {
-                width: 100px;
-                height: 25px;
-                margin: 12px;
-                border-radius: 24px;
-                outline: none;
-                border: none;
+            .item-cont {
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: 33% 33% 33%;
+                padding: 12px;
                 color: white;
             }
-            .add-btn {
-                background-color: green;
-            }
-            .sub-btn {
-                background-color: red;
-            }
+                .item-num {
+                    color: blue;
+                    margin-left: 8px;
+                }
+                .item-name {
+                    text-align: center;
+                }
+                .act-check {
+                    justify-self: flex-end;
+                    width: 25px;
+                    height: 25px;
+                }
 
         .sidebar-cont {
             border-right: thin solid black;
