@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
 
-const Scale = () => {
-    const [karmaStatus, setKarmaStatus] = useState(50)
+const Scale = ({ karmaStatus }) => {
     return (
         <div className="scale-cont">
             <div className="scale-box">
