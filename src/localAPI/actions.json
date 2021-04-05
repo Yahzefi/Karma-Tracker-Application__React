@@ -1,38 +1,64 @@
 {
-    "Actions":
-    {
-        "Good": {
-            "One":
-            [
-                "Task One", "Task Two", "Task Three"
-            ],
-            "Two":
-            [
-                "Task One", "Task Two", "Task Three"
-            ],
-            "Three":
-            [
-                "Task One", "Task Two", "Task Three"
-            ]
-        },
-        "Neutral": [
-            "Task One",
-            "Task Two",
-            "Task Three"
+    "Actions": {
+        "C1": [
+            {
+                "id": 1,
+                "title": "Spared Enemy",
+                "value": 2,
+                "isCompleted": false
+            },
+            {
+                "id": 2,
+                "title": "Arrested Enemy",
+                "value": 0,
+                "isCompleted": false
+            },
+            {
+                "id": 3,
+                "title": "Killed Enemy",
+                "value": -2,
+                "isCompleted": false
+            }
         ],
-        "Bad": {
-            "One":
-            [
-                "Task One", "Task Two", "Task Three"
-            ],
-            "Two":
-            [
-                "Task One", "Task Two", "Task Three"
-            ],
-            "Three":
-            [
-                "Task One", "Task Two", "Task Three"
-            ]
-        }
+        "C2": [
+            {
+                "id": 1,
+                "title": "Did Thing",
+                "value": 2,
+                "isCompleted": false
+            }
+        ],
+        "C3": [
+            {
+                "id": 1,
+                "title": "Did Thing",
+                "value": 2,
+                "isCompleted": false
+            }
+        ],
+        "C4": [
+            {
+                "id": 1,
+                "title": "Did Thing",
+                "value": 2,
+                "isCompleted": false
+            }
+        ],
+        "C5": [
+            {
+                "id": 1,
+                "title": "Did Thing",
+                "value": 2,
+                "isCompleted": false
+            }
+        ],
+        "C6": [
+            {
+                "id": 1,
+                "title": "Did Thing",
+                "value": 2,
+                "isCompleted": false
+            }
+        ]
     }
 }
