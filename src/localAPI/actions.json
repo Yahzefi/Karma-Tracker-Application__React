@@ -3,27 +3,34 @@
         "C1": [
             {
                 "id": 1,
-                "title": "Spared Enemy",
-                "value": 2,
-                "isCompleted": false
+                "title": "You saved the girl stranded in her burning car",
+                "karmaType": "Good",
+                "value": 3,
+                "isCompleted": false,
+                "location": "City Ruins - Metro"
             },
             {
                 "id": 2,
-                "title": "Arrested Enemy",
+                "title": "You chose to ignore Kenny's rude comment and avoid confrontation",
+                "karmaType": "Neutral",
                 "value": 0,
-                "isCompleted": false
+                "isCompleted": false,
+                "location": "Jill's Garage - Toolshed"
             },
             {
                 "id": 3,
-                "title": "Killed Enemy",
-                "value": -2,
-                "isCompleted": false
+                "title": "You left Simon after he was attacked by alligators",
+                "karmaType": "Bad",
+                "value": 5,
+                "isCompleted": false,
+                "location": "Fiendsburg - Canals"
             }
         ],
         "C2": [
             {
                 "id": 1,
-                "title": "Did Thing",
+                "title": "Did Thing 2",
+                "karmaType": "Good",
                 "value": 2,
                 "isCompleted": false
             }
@@ -31,7 +38,8 @@
         "C3": [
             {
                 "id": 1,
-                "title": "Did Thing",
+                "title": "Did Thing 3",
+                "karmaType": "Good",
                 "value": 2,
                 "isCompleted": false
             }
@@ -39,7 +47,8 @@
         "C4": [
             {
                 "id": 1,
-                "title": "Did Thing",
+                "title": "Did Thing 4",
+                "karmaType": "Good",
                 "value": 2,
                 "isCompleted": false
             }
@@ -47,7 +56,8 @@
         "C5": [
             {
                 "id": 1,
-                "title": "Did Thing",
+                "title": "Did Thing 5",
+                "karmaType": "Good",
                 "value": 2,
                 "isCompleted": false
             }
@@ -55,7 +65,8 @@
         "C6": [
             {
                 "id": 1,
-                "title": "Did Thing",
+                "title": "Did Thing 6",
+                "karmaType": "Good",
                 "value": 2,
                 "isCompleted": false
             }
