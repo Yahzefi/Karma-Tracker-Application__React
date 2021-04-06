@@ -5,7 +5,7 @@ const Sidebar = ({ changeChapter }) => {
     return (
         <div className="sidebar-cont">
             <div className="sidebar-head">
-                <h2>Chapter Select</h2>
+                <h2>CHAPTER SELECT</h2>
             </div>
             <div className="sidebar-content">
                 {/* These will be links that connect with Feed.js */}
