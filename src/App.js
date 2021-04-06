@@ -37,11 +37,22 @@ function App() {
       <Modals />
       <Header />
       <div className="scale-cont">
-        <Scale karmaStatus={score}/>
+        <Scale karmaStatus={score} currentKarma={score <= 40 ? "Bad" : score > 40 && score <= 60 ? "Neutral" : score > 60 && "Good"} />
       </div>
       <div className="body-cont">
         <Sidebar changeChapter={(location)=>setChapter({type: location})}/>
-        <Feed actions={actions} />
+        <Feed 
+          actions={actions} 
+          chapterName={chapter} 
+          changeScore={
+            (isChecked, chapterKarma, karmaValue)=>{
+              setScore(
+                isChecked ? {type: "BOX_CHECKED", karma: {type: chapterKarma, value: karmaValue}} 
+                : {type: "BOX_UNCHECKED", karma: {type: chapterKarma, value: karmaValue}}
+              )
+            }
+          } 
+        />
       </div>
       <>
         <Footer />
