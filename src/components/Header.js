@@ -15,6 +15,9 @@ const Header = () => {
             case "register":
                 console.log("register modal")
                 break;
+            case "":
+                console.log("clicked the nav")
+                break;
             default:
                 throw Error("Navigation Item Not Found")
         }
