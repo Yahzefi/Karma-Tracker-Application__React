@@ -72,8 +72,16 @@
                 .scale-fill {
                     height: 100%;
                 }
+                    .scale-karma {
+                        text-align: center;
+                        font-size: 34px;
+                        letter-spacing: 8px;
+                        font-weight: bold;
+                        text-decoration: underline;
+                    }
             .scale-bar {
                 position: absolute;
+                z-index: 0;
                 top: 30.75%;
                 width: 0.1%;
                 height: 7.5%;
@@ -107,21 +115,21 @@
             .item-head {
                 display: grid;
                 grid-template-rows: auto;
-                grid-template-columns: 25% 25% 25% 25%;
+                grid-template-columns: 5% 45% 25% 25%;
                 border-bottom: thin solid white;
                 color: white;
             }
             .item-cont {
                 display: grid;
                 grid-template-rows: auto;
-                grid-template-columns: 25% 25% 25% 25%;
+                grid-template-columns: 5% 45% 25% 25%;
                 padding: 8px;
                 color: white;
             }
                 .item-num {
                     color: black;
                     background-color: white;
-                    width: 5%;
+                    width: 25%;
                     box-shadow: 0.5px 0px 2px 1px red;
                     border-radius: 50%;
                     padding: 2px 0px;
@@ -135,7 +143,7 @@
                     text-align: center;
                 }
                 .act-check {
-                    justify-self: flex-end;
+                    justify-self: center;
                     width: 25px;
                     height: 25px;
                 }
@@ -187,6 +195,66 @@
         justify-content: center;
         background: linear-gradient(rgb(50, 50, 50), rgb(0, 0, 0))
     }
+
+    .modal-cont {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+        .log-modal, .reg-modal {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            left: 33%;
+            top: 10%;
+            background-color: rgb(150, 150, 150);
+            width: 33%;
+            height: 75%;
+        }
+            .modal-content {
+                display: grid;
+                margin-top: 12px;
+                width: 75%;
+                justify-content: center;
+                align-items: center;
+            }
+            .lg-ct {
+                grid-template-rows: 33% 33% 33%;
+                grid-template-columns: 50% 50%;
+            }
+            .rg-ct {
+                grid-template-rows: 14.25% 14.25% 14.25% 14.25% 14.25% 14.25% 14.25%;
+                grid-template-columns: 50% 50%;
+            }
+                .modal-submit {
+                    grid-row: 3 / 3;
+                    grid-column: 1 / 3;
+                    margin: auto;
+                    width: 33%;
+                    height: 25%;
+                    background-color: skyblue;
+                    border: none;
+                    outline: none;
+                    border-radius: 36px;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                .modal-label {
+                    color: blue;
+                    text-align: center;
+                }
+                .modal-input {
+                    height: 15%;
+                    border-radius: 24px;
+                    border: none;
+                }
+                .modal-submit:hover {
+                    cursor: pointer;
+                    background-color: lightblue;
+                }
 
 @keyframes logoSpin {
     from {transform: rotate(0deg)}
