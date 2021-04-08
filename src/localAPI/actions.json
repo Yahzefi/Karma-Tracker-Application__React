@@ -3,72 +3,445 @@
         "C1": [
             {
                 "id": 1,
-                "title": "You saved the girl stranded in her burning car",
+                "title": "Good Action (+2)",
                 "karmaType": "Good",
-                "value": 3,
+                "value": 2,
                 "isCompleted": false,
-                "location": "City Ruins - Metro"
+                "location": "Underground Bunker - Temple of Tranquility"
             },
             {
                 "id": 2,
-                "title": "You chose to ignore Kenny's rude comment and avoid confrontation",
-                "karmaType": "Neutral",
-                "value": 0,
+                "title": "Bad Action (-2)",
+                "karmaType": "Bad",
+                "value": 2,
                 "isCompleted": false,
-                "location": "Jill's Garage - Toolshed"
+                "location":"Underground Bunker - Temple of Tranquility"
             },
             {
                 "id": 3,
-                "title": "You left Simon after he was attacked by alligators",
-                "karmaType": "Bad",
+                "title": "Good Action (+5)",
+                "karmaType": "Good",
                 "value": 5,
                 "isCompleted": false,
-                "location": "Fiendsburg - Canals"
+                "location": "Underground Bunker - Stairs of Hierarchy"
+            },
+            {
+                "id": 4,
+                "title": "Neutral Action (N/A)",
+                "karmaType": "Neutral",
+                "value": null,
+                "isCompleted": false,
+                "location": "Underground Bunker - Stairs of Hierarchy"
+            },
+            {
+                "id": 5,
+                "title": "Bad Action (-10)",
+                "karmaType": "Bad",
+                "value": 10,
+                "isCompleted": false,
+                "location": "Underground Bunker - Stairs of Hierarchy"
+            },
+            {
+                "id": 6,
+                "title": "Good Action (+8)",
+                "karmaType": "Good",
+                "value": 8,
+                "isCompleted": false,
+                "location": "Underground Bunker - Deployment Center"
+            },
+            {
+                "id": 7,
+                "title": "Good Action (+2)",
+                "karmaType": "Good",
+                "value": 2,
+                "isCompleted": false,
+                "location": "Underground Bunker - Deployment Center"
+            },
+            {
+                "id": 8,
+                "title": "Neutral Action (N/A)",
+                "karmaType": "Neutral",
+                "value": null,
+                "isCompleted": false,
+                "location": "Underground Bunker - Deployment Center"
+            },
+            {
+                "id": 9,
+                "title": "Bad Action (-4)",
+                "karmaType": "Bad",
+                "value": 4,
+                "isCompleted": false,
+                "location": "Underground Bunker - Deployment Center"
             }
         ],
         "C2": [
             {
                 "id": 1,
-                "title": "Did Thing 2",
+                "title": "Good Action (+2)",
                 "karmaType": "Good",
                 "value": 2,
-                "isCompleted": false
+                "isCompleted": false,
+                "location": "Wilson's Grotto - Town Center"
+            },
+            {
+                "id": 2,
+                "title": "Bad Action (-2)",
+                "karmaType": "Bad",
+                "value": 2,
+                "isCompleted": false,
+                "location":"Wilson's Grotto - Town Center"
+            },
+            {
+                "id": 3,
+                "title": "Good Action (+5)",
+                "karmaType": "Good",
+                "value": 5,
+                "isCompleted": false,
+                "location": "Wilson's Grotto - Town Center"
+            },
+            {
+                "id": 4,
+                "title": "Neutral Action (N/A)",
+                "karmaType": "Neutral",
+                "value": null,
+                "isCompleted": false,
+                "location": "Wilson's Grotto - Town Center"
+            },
+            {
+                "id": 5,
+                "title": "Bad Action (-10)",
+                "karmaType": "Bad",
+                "value": 10,
+                "isCompleted": false,
+                "location": "Wilson's Grotto - Wilson's House"
+            },
+            {
+                "id": 6,
+                "title": "Good Action (+8)",
+                "karmaType": "Good",
+                "value": 8,
+                "isCompleted": false,
+                "location": "Wilson's Grotto - The Old Mines"
+            },
+            {
+                "id": 7,
+                "title": "Good Action (+2)",
+                "karmaType": "Good",
+                "value": 2,
+                "isCompleted": false,
+                "location": "Wilson's Grotto - The Old Mines"
+            },
+            {
+                "id": 8,
+                "title": "Neutral Action (N/A)",
+                "karmaType": "Neutral",
+                "value": null,
+                "isCompleted": false,
+                "location": "Wilson's Grotto - Outskirts"
+            },
+            {
+                "id": 9,
+                "title": "Bad Action (-4)",
+                "karmaType": "Bad",
+                "value": 4,
+                "isCompleted": false,
+                "location": "Wilson's Grotto - Outskirts"
             }
         ],
         "C3": [
             {
                 "id": 1,
-                "title": "Did Thing 3",
+                "title": "Good Action (+2)",
                 "karmaType": "Good",
                 "value": 2,
-                "isCompleted": false
+                "isCompleted": false,
+                "location": "Fiendsburg - Chapel"
+            },
+            {
+                "id": 2,
+                "title": "Bad Action (-2)",
+                "karmaType": "Bad",
+                "value": 2,
+                "isCompleted": false,
+                "location":"Fiendsburg - Chapel"
+            },
+            {
+                "id": 3,
+                "title": "Good Action (+5)",
+                "karmaType": "Good",
+                "value": 5,
+                "isCompleted": false,
+                "location": "Fiendsburg - Chapel"
+            },
+            {
+                "id": 4,
+                "title": "Neutral Action (N/A)",
+                "karmaType": "Neutral",
+                "value": null,
+                "isCompleted": false,
+                "location": "Fiendsburg - Canals"
+            },
+            {
+                "id": 5,
+                "title": "Bad Action (-10)",
+                "karmaType": "Bad",
+                "value": 10,
+                "isCompleted": false,
+                "location": "Fiendsburg - Canals"
+            },
+            {
+                "id": 6,
+                "title": "Good Action (+8)",
+                "karmaType": "Good",
+                "value": 8,
+                "isCompleted": false,
+                "location": "Fiendsburg - Canals"
+            },
+            {
+                "id": 7,
+                "title": "Good Action (+2)",
+                "karmaType": "Good",
+                "value": 2,
+                "isCompleted": false,
+                "location": "Fiendsburg - The Colesseum"
+            },
+            {
+                "id": 8,
+                "title": "Neutral Action (N/A)",
+                "karmaType": "Neutral",
+                "value": null,
+                "isCompleted": false,
+                "location": "Fiendsburg - The Colesseum"
+            },
+            {
+                "id": 9,
+                "title": "Bad Action (-4)",
+                "karmaType": "Bad",
+                "value": 4,
+                "isCompleted": false,
+                "location": "Fiendsburg - The Colesseum"
             }
         ],
         "C4": [
             {
                 "id": 1,
-                "title": "Did Thing 4",
+                "title": "Good Action (+2)",
                 "karmaType": "Good",
                 "value": 2,
-                "isCompleted": false
+                "isCompleted": false,
+                "location": "Metro Station - Sub-Level One"
+            },
+            {
+                "id": 2,
+                "title": "Bad Action (-2)",
+                "karmaType": "Bad",
+                "value": 2,
+                "isCompleted": false,
+                "location":"Metro Station - Sub-Level Two"
+            },
+            {
+                "id": 3,
+                "title": "Good Action (+5)",
+                "karmaType": "Good",
+                "value": 5,
+                "isCompleted": false,
+                "location": "Metro Station - Sub-Level Two"
+            },
+            {
+                "id": 4,
+                "title": "Neutral Action (N/A)",
+                "karmaType": "Neutral",
+                "value": null,
+                "isCompleted": false,
+                "location": "Metro Station - Sub-Level Two"
+            },
+            {
+                "id": 5,
+                "title": "Bad Action (-10)",
+                "karmaType": "Bad",
+                "value": 10,
+                "isCompleted": false,
+                "location": "Metro Station - Sub-Level Two"
+            },
+            {
+                "id": 6,
+                "title": "Good Action (+8)",
+                "karmaType": "Good",
+                "value": 8,
+                "isCompleted": false,
+                "location": "Metro Station - Sub-Level Two"
+            },
+            {
+                "id": 7,
+                "title": "Good Action (+2)",
+                "karmaType": "Good",
+                "value": 2,
+                "isCompleted": false,
+                "location": "Metro Station - The Crypt"
+            },
+            {
+                "id": 8,
+                "title": "Neutral Action (N/A)",
+                "karmaType": "Neutral",
+                "value": null,
+                "isCompleted": false,
+                "location": "Metro Station - The Crypt"
+            },
+            {
+                "id": 9,
+                "title": "Bad Action (-4)",
+                "karmaType": "Bad",
+                "value": 4,
+                "isCompleted": false,
+                "location": "Metro Station - The Crypt"
             }
         ],
         "C5": [
             {
                 "id": 1,
-                "title": "Did Thing 5",
+                "title": "Good Action (+2)",
                 "karmaType": "Good",
                 "value": 2,
-                "isCompleted": false
+                "isCompleted": false,
+                "location": "Underworld - The Path of Exile"
+            },
+            {
+                "id": 2,
+                "title": "Bad Action (-2)",
+                "karmaType": "Bad",
+                "value": 2,
+                "isCompleted": false,
+                "location":"Underworld - The Path of Exile"
+            },
+            {
+                "id": 3,
+                "title": "Good Action (+5)",
+                "karmaType": "Good",
+                "value": 5,
+                "isCompleted": false,
+                "location": "Underworld - The Path of Exile"
+            },
+            {
+                "id": 4,
+                "title": "Neutral Action (N/A)",
+                "karmaType": "Neutral",
+                "value": null,
+                "isCompleted": false,
+                "location": "Underworld - The Path of Exile"
+            },
+            {
+                "id": 5,
+                "title": "Bad Action (-10)",
+                "karmaType": "Bad",
+                "value": 10,
+                "isCompleted": false,
+                "location": "Underworld - The Path of Exile"
+            },
+            {
+                "id": 6,
+                "title": "Good Action (+8)",
+                "karmaType": "Good",
+                "value": 8,
+                "isCompleted": false,
+                "location": "Underworld - The River Styx"
+            },
+            {
+                "id": 7,
+                "title": "Good Action (+2)",
+                "karmaType": "Good",
+                "value": 2,
+                "isCompleted": false,
+                "location": "Underworld - The River Styx"
+            },
+            {
+                "id": 8,
+                "title": "Neutral Action (N/A)",
+                "karmaType": "Neutral",
+                "value": null,
+                "isCompleted": false,
+                "location": "Underworld - The River Styx"
+            },
+            {
+                "id": 9,
+                "title": "Bad Action (-4)",
+                "karmaType": "Bad",
+                "value": 4,
+                "isCompleted": false,
+                "location": "Underworld - Hall of Hades"
             }
         ],
         "C6": [
             {
                 "id": 1,
-                "title": "Did Thing 6",
+                "title": "Good Action (+2)",
                 "karmaType": "Good",
                 "value": 2,
-                "isCompleted": false
+                "isCompleted": false,
+                "location": "Mount Olympus - Entrance"
+            },
+            {
+                "id": 2,
+                "title": "Bad Action (-2)",
+                "karmaType": "Bad",
+                "value": 2,
+                "isCompleted": false,
+                "location":"Mount Olympus - Hall of Hercules"
+            },
+            {
+                "id": 3,
+                "title": "Good Action (+5)",
+                "karmaType": "Good",
+                "value": 5,
+                "isCompleted": false,
+                "location": "Mount Olympus - Hall of Hercules"
+            },
+            {
+                "id": 4,
+                "title": "Neutral Action (N/A)",
+                "karmaType": "Neutral",
+                "value": null,
+                "isCompleted": false,
+                "location": "Mount Olympus - Hall of Hera"
+            },
+            {
+                "id": 5,
+                "title": "Bad Action (-10)",
+                "karmaType": "Bad",
+                "value": 10,
+                "isCompleted": false,
+                "location": "Mount Olympus - Hall of Hera"
+            },
+            {
+                "id": 6,
+                "title": "Good Action (+8)",
+                "karmaType": "Good",
+                "value": 8,
+                "isCompleted": false,
+                "location": "Mount Olympus - Hall of Hera"
+            },
+            {
+                "id": 7,
+                "title": "Good Action (+2)",
+                "karmaType": "Good",
+                "value": 2,
+                "isCompleted": false,
+                "location": "Mount Olympus - Hall of Zeus"
+            },
+            {
+                "id": 8,
+                "title": "Neutral Action (N/A)",
+                "karmaType": "Neutral",
+                "value": null,
+                "isCompleted": false,
+                "location": "Mount Olympus - Hall of Zeus"
+            },
+            {
+                "id": 9,
+                "title": "Bad Action (-4)",
+                "karmaType": "Bad",
+                "value": 4,
+                "isCompleted": false,
+                "location": "Mount Olympus - Hall of Zeus"
             }
         ]
     }
