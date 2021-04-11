@@ -11,7 +11,7 @@ const Scale = ({ karmaStatus, currentKarma }) => {
             </div>
             <div className="scale-box">
                 <div className="scale-fill" style={karmaStatus <= 40 ? {backgroundColor: "red", width: `${karmaStatus}%`} : karmaStatus >= 40 && karmaStatus <= 60 ? {backgroundColor: "yellow", width: `${karmaStatus}%`} : {backgroundColor: 'green', width: `${karmaStatus}%`}}>
-                    <p style={{textAlign: "center"}}>{currentKarma}</p>
+                    <p className="scale-karma">{currentKarma}</p>
                 </div>
             </div>
             <span className="scale-bar bar-0"></span>
