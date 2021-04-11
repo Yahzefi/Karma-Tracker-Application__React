@@ -20,6 +20,11 @@ function App() {
   const [score, setScore] = useReducer(updateScore, 50)
   const [chapter, setChapter] = useReducer(updateChapter, "")
   const [actions, setActions] = useReducer(updateActions, [])
+  const [display, setDisplay] = useState({
+    logModal: false,
+    regModal: false
+})
+  
   useEffect(()=>{
     const fetchData = async () => {
       const module = await import('./localAPI/actions.json')
@@ -31,11 +36,46 @@ function App() {
   useEffect(()=>{
     setActions({type: chapter, data: initActions})
   }, [chapter])
+
+  const pullModal = (ev) => {
+    switch(ev.target.id){
+        case "login":
+            setDisplay({ ...display, logModal: true })
+            break;
+        case "register":
+            setDisplay({ ...display, regModal: true })
+            break;
+        case "":
+            console.log("clicked the nav")
+            break;
+        default:
+            throw Error("Navigation Item Not Found")
+    }
+}
+
+  const closeModal = (ev) => {
+    if(ev.target.id === "log_close"){
+      setDisplay({ ...display, logModal: false })
+    } else {
+      setDisplay({ ...display, regModal: false })
+    }
+  }
+
+  const validateUserCredentials = (data) => {
+    console.log("Validation Function")
+    console.log(data);
+  }
+
+  const registerNewUser = (data) => {
+    console.log("User Registration Function");
+    console.log(data);
+  }
+
   return (
     <Router>
     <div className="primary-cont">
-      <Modals />
-      <Header />
+      <Modals validateUser={(data)=>validateUserCredentials(data)} registerUser={(data)=>registerNewUser(data)} display={display} changeDisplay={(ev)=>closeModal(ev)}/>
+      <Header pullModal={(ev)=>pullModal(ev)}/>
       <div className="scale-cont">
         <Scale karmaStatus={score} currentKarma={score <= 40 ? "Bad" : score > 40 && score <= 60 ? "Neutral" : score > 60 && "Good"} />
       </div>
