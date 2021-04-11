@@ -4,24 +4,8 @@ import Navbar from "./Navbar"
 
 import logo from '../Images/header_logo.png'
 
-const Header = () => {
+const Header = ({ pullModal }) => {
     const [logoAnimation, setLogoAnimation] = useState(true)
-
-    const pullModal = (ev) => {
-        switch(ev.target.id){
-            case "login":
-                console.log("login modal")
-                break;
-            case "register":
-                console.log("register modal")
-                break;
-            case "":
-                console.log("clicked the nav")
-                break;
-            default:
-                throw Error("Navigation Item Not Found")
-        }
-    }
 
     return (
         <div className="h-cont">
