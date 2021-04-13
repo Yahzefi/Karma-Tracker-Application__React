@@ -1,5 +1,7 @@
 export function updateChapter(state, update){
     switch(update.type){
+        case 0:
+            return "home"
         case 1:
             return "c1"
         case 2:
