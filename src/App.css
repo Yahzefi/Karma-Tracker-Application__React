@@ -174,12 +174,20 @@
             }
             .sidebar-link {
                 color: grey;
-                text-decoration: none;
+            }
+            .home-link {
+                font-size: 14px;
+                text-align: left;
+                margin-left: 12px;
             }
                 .sidebar-link:hover {
                     cursor: pointer;
                     color: white;
                     transition: color 200ms ease-out;
+                    text-decoration: none;
+                }
+                .home-link:hover {
+                    text-decoration: underline;
                 }
             
 
@@ -189,13 +197,14 @@
         grid-template-columns: 33% 33% 33%;
         padding-top: 12px;
         color: white;
-        text-align: center;
-        text-decoration: underline;
-        height: 200px;
+        min-height: 200px;
         justify-content: center;
         background: linear-gradient(rgb(50, 50, 50), rgb(0, 0, 0))
     }
-
+        .foot-cont h4 {
+            text-decoration: underline;
+            text-align: center;
+        }
     .modal-cont {
         display: none;
         position: fixed;
@@ -210,7 +219,9 @@
             position: absolute;
             left: 33%;
             top: 10%;
-            background-color: rgb(150, 150, 150);
+            background-image: url("Images/modal_bg.jpg");
+            background-size: cover;
+            background-position:center;
             width: 33%;
             height: 75%;
         }
@@ -220,18 +231,23 @@
                 margin-right: 2.5%;
                 align-self: flex-end;
                 text-align: center;
+                color: white;
             }
             .close-btn:hover {
                 cursor: pointer;
-                color: darkred;
+                color: red;
             }
             .modal-head {
-                width: 75%;
-                text-align: center;
+                display: flex;
+                width: 66%;
+                height: 25%;
+                justify-content: center;
                 align-self: center;
+                align-items: center;
                 font-size: 36px;
-                margin: auto;
                 letter-spacing: 4px;
+                background-color: grey;
+                box-shadow: 0px 0px 4px 2px grey;
             }
             .modal-content {
                 display: grid;
@@ -241,16 +257,18 @@
                 align-self: center;
                 justify-content: center;
                 align-items: center;
-                background-color: lightgrey;
+                border: none;
+                background-color: grey;
+                box-shadow: 0px 0px 4px 2px grey;
             }
             .lg-ct {
-                grid-template-rows: 25% 25% 50%;
+                grid-template-rows: 25% 25% 5% 45%;
                 grid-template-columns: 25% 75%;
             }
             .rg-ct {
                 grid-template-rows: 14.25% 14.25% 14.25% 14.25% 14.25% 14.25% 14.25%;
                 grid-template-columns: 50% 50%;
-                height: 75%;
+                height: 65%;
             }
                 .log-submit, .reg-submit {
                     margin: auto;
@@ -262,8 +280,20 @@
                     font-size: 14px;
                     font-weight: bold;
                 }
-                .log-submit {
+                .reg-msg {
                     grid-row: 3 / 3;
+                    grid-column: 1 / 3;
+                    text-align: center;
+                }
+                    .reg-link {
+                        text-decoration: underline;
+                    }
+                    .reg-link:hover {
+                        cursor: pointer;
+                        color: white;
+                    }
+                .log-submit {
+                    grid-row: 4 / 4;
                     grid-column: 1 / 3;
                     height: 25%;
                 }
@@ -309,15 +339,3 @@
         display: none;
     }
 }
-/* 
-    .theme-btn {
-        width: 10%;
-        height: 10%;
-        margin-top: 5%;
-        border-radius: 24px;
-        outline: none;
-    }
-    .theme-btn:hover {
-        cursor: pointer;
-    } */
-
