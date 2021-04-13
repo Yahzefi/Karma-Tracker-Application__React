@@ -13,7 +13,6 @@ import Scale from './components/Scale';
 import Sidebar from './components/Sidebar';
 import Feed from './components/Feed';
 import Footer from './components/Footer';
-// import ThemeContextProvider from './contexts/themeContext';
 
 function App() {
   const [initActions, setInitActions] = useState([])
@@ -35,7 +34,7 @@ function App() {
   }, [])
   useEffect(()=>{
     setActions({type: chapter, data: initActions})
-  }, [chapter])
+  }, [chapter, initActions])
 
   const pullModal = (ev) => {
     switch(ev.target.id){
@@ -56,19 +55,27 @@ function App() {
   const closeModal = (ev) => {
     if(ev.target.id === "log_close"){
       setDisplay({ ...display, logModal: false })
-    } else {
+    } else if(ev.target.id === 'reg_close') {
       setDisplay({ ...display, regModal: false })
+    } else if(ev.target.id === "registry_link") {
+      setDisplay({logModal: false, regModal: true})
     }
   }
 
   const validateUserCredentials = (data) => {
-    console.log("Validation Function")
-    console.log(data);
+    console.log("Username: " + data.logUser);
+    console.log("Password: " + data.logPass);
+    setDisplay({...display, logModal: false})
   }
 
   const registerNewUser = (data) => {
-    console.log("User Registration Function");
-    console.log(data);
+    console.log("Username: " + data.regUser)
+    console.log("Password: " + data.regPass)
+    console.log("First Name: " + data.regFirstName)
+    console.log("Last Name: " + data.regLastName)
+    console.log("Email Address: " + data.regEmail)
+    console.log("Phone Number: " + data.regPhoneNumber)
+    setDisplay({...display, regModal: false})
   }
 
   return (
