@@ -12,7 +12,7 @@ const Feed = ({ actions, chapterName, changeScore }) => {
                 <h4>Number</h4>
                 <h4 style={{textAlign:"center"}}>Action Name</h4>
                 <h4 style={{textAlign:"center"}}>Location</h4>
-                <h4 style={{textAlign:"right"}}>Done?</h4>
+                <h4 style={{textAlign:"center"}}>Done?</h4>
             </div>
             }
             <div className="items-cont">
