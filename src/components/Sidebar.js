@@ -9,6 +9,7 @@ const Sidebar = ({ changeChapter }) => {
             </div>
             <div className="sidebar-content">
                 {/* These will be links that connect with Feed.js */}
+                <Link to="/" className="sidebar-link home-link" onClick={()=>changeChapter(0)}>Go Back</Link>
                 <Link to="/chapter_one" className="sidebar-link" onClick={()=>changeChapter(1)}>Chapter One</Link>
                 <Link to="/chapter_two" className="sidebar-link" onClick={()=>changeChapter(2)}>Chapter Two</Link>
                 <Link to="/chapter_three" className="sidebar-link" onClick={()=>changeChapter(3)}>Chapter Three</Link>
