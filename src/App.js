@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom"
 import { updateScore } from "./reducers/updateScore"
 import { updateChapter } from "./reducers/updateChapter"
 import { updateActions } from "./reducers/updateActions"
+import { updateLocalStorage } from "./reducers/updateLocalStorage"
 
 import Modals from './components/Modals';
 import Header from "./components/Header";
@@ -14,27 +15,46 @@ import Sidebar from './components/Sidebar';
 import Feed from './components/Feed';
 import Footer from './components/Footer';
 
+
+//        GO TO SECTION.JS AND FIX WHAT NEEDS FIXED       //
+
+
 function App() {
   const [initActions, setInitActions] = useState([])
   const [score, setScore] = useReducer(updateScore, 50)
   const [chapter, setChapter] = useReducer(updateChapter, "")
   const [actions, setActions] = useReducer(updateActions, [])
+  const [localStorageState, setLocalStorage] = useReducer(updateLocalStorage, [])
   const [display, setDisplay] = useState({
     logModal: false,
     regModal: false
 })
-  
   useEffect(()=>{
+    const pullLocalStorage = () => {
+      for(let i=0; i < localStorage.length; i++){
+        setLocalStorage({type: "INIT", localData: {key: localStorage.key(i), value: localStorage.getItem(localStorage.key(i))}})
+      }
+    }
     const fetchData = async () => {
       const module = await import('./localAPI/actions.json')
       const data = module.Actions
       setInitActions(data)
   }
-    fetchData()
+  fetchData()
+  pullLocalStorage()
   }, [])
   useEffect(()=>{
     setActions({type: chapter, data: initActions})
   }, [chapter, initActions])
+  useEffect(()=>{
+    const changeLocalStorage = () => {
+      localStorageState.forEach((item)=>{
+        localStorage.removeItem(item.localKey)
+        localStorage.setItem(item.localKey, item.localValue)
+      })
+    }
+    changeLocalStorage()
+  }, [localStorageState])
 
   const pullModal = (ev) => {
     switch(ev.target.id){
@@ -90,7 +110,8 @@ function App() {
         <Sidebar changeChapter={(location)=>setChapter({type: location})}/>
         <Feed 
           actions={actions} 
-          chapterName={chapter} 
+          chapterName={chapter}
+          currentLocalStorage={localStorageState}
           changeScore={
             (isChecked, chapterKarma, karmaValue)=>{
               setScore(
@@ -98,7 +119,13 @@ function App() {
                 : {type: "BOX_UNCHECKED", karma: {type: chapterKarma, value: karmaValue}}
               )
             }
-          } 
+          }
+          updateLocalStorage={(isChecked, chapterName, actionNumber)=>{
+            setLocalStorage(
+              isChecked ? {type: "BOX_CHECKED", chapter:{name: chapterName, itemNumber: actionNumber}}
+              : {type: "BOX_UNCHECKED", chapter:{name: chapterName, itemNumber: actionNumber}}
+            )
+          }}
         />
       </div>
       <>
