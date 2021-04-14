@@ -1,7 +1,16 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-const Section = ({ chapterName, chapterKarma, karmaValue, actionNumber, actionName, actionLocation, changeScore }) => {
+const Section = ({ chapterName, chapterKarma, karmaValue, actionNumber, actionName, actionLocation, changeScore, currentLocalStorage, updateLocalStorage }) => {
     const [isChecked, setChecked] = useState(false)
+    useEffect(()=>{
+        currentLocalStorage.forEach((item)=>{
+            if(item.localKey == "checkBoxStatus_" + chapterName + "_" + actionNumber){
+                setChecked(JSON.parse(item.localValue));
+            }
+        })
+        // changeScore(isChecked, chapterKarma, karmaValue)
+        // FIX THE SCALE SCORE! //
+    }, [])
     return (
         <div className="item-cont" id={`${chapterName}_${chapterKarma}`}>
             <p className="item-num">{actionNumber}</p>
@@ -13,6 +22,7 @@ const Section = ({ chapterName, chapterKarma, karmaValue, actionNumber, actionNa
             onChange={()=>{
                 setChecked(!isChecked)
                 changeScore(!isChecked, chapterKarma, karmaValue)
+                updateLocalStorage(!isChecked, chapterName, actionNumber)
             }} 
             checked={isChecked}
             />
