@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom"
 
 import Section from './Section'
 
-const Feed = ({ actions, chapterName, changeScore }) => {
+const Feed = ({ actions, chapterName, currentLocalStorage, changeScore, updateLocalStorage }) => {
     const location = useLocation()
     return (
         <div className="feed-cont">
@@ -25,8 +25,10 @@ const Feed = ({ actions, chapterName, changeScore }) => {
                             karmaValue={act.value} 
                             actionNumber={act.id} 
                             actionName={act.title} 
-                            actionLocation={act.location} 
+                            actionLocation={act.location}
+                            currentLocalStorage={currentLocalStorage}
                             changeScore={changeScore}
+                            updateLocalStorage={updateLocalStorage}
                         /> 
                     ))
                 }
