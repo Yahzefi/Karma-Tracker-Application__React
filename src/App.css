@@ -136,10 +136,7 @@
                     text-align: center;
                     align-self: center;
                 }
-                .item-name {
-                    text-align: center;
-                }
-                .item-location {
+                .item-name, .item-location {
                     text-align: center;
                 }
                 .act-check {
@@ -170,7 +167,7 @@
                 width: 100%;
                 margin-top: 5%;
                 text-align: center;
-                
+                padding-bottom: 5%;
             }
             .sidebar-link {
                 color: grey;
@@ -205,6 +202,31 @@
             text-decoration: underline;
             text-align: center;
         }
+        .brand-cont {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+            .foot-logo {
+                width: 25%;
+            }
+        .gameLinks-cont {
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+            .gameLinks-cont > a {
+                color: white;
+            }
+        .contact-cont {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+            .contact-cont > a {
+                color: white;
+            }
     .modal-cont {
         display: none;
         position: fixed;
