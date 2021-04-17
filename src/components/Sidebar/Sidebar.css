@@ -1,0 +1,42 @@
+.sidebar-cont {
+    border-right: thin solid rgb(25, 25, 25);
+    flex: 0.20;
+    background: linear-gradient(rgb(0, 0, 0), rgb(50, 50, 50))
+}
+    .sidebar-head {
+        display: flex;
+        height: 15%;
+        width: 100%;
+        letter-spacing: 6px;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        border-bottom: thin solid rgb(25, 25, 25);
+    }
+    .sidebar-content {
+        display: grid;
+        font-size: 28px;
+        height: 85%;
+        width: 100%;
+        margin-top: 5%;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+    .sidebar-link {
+        color: grey;
+    }
+    .home-link {
+        font-size: 14px;
+        text-align: left;
+        margin-left: 12px;
+    }
+        .sidebar-link:hover {
+            cursor: pointer;
+            color: white;
+            transition: color 200ms ease-out;
+            text-decoration: none;
+        }
+        .home-link:hover {
+            text-decoration: underline;
+        }
+    
