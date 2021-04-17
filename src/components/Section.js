@@ -8,8 +8,6 @@ const Section = ({ chapterName, chapterKarma, karmaValue, actionNumber, actionNa
                 setChecked(JSON.parse(item.localValue));
             }
         })
-        // changeScore(isChecked, chapterKarma, karmaValue)
-        // FIX THE SCALE SCORE! //
     })
     return (
         <div className="item-cont" id={`${chapterName}_${chapterKarma}`}>
