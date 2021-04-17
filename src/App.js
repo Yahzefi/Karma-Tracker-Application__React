@@ -1,3 +1,9 @@
+import './components/Header/Header.css'
+import './components/Feed/Feed.css'
+import './components/Scale/Scale.css'
+import './components/Footer/Footer.css'
+import './components/Modals/Modals.css'
+import './components/Sidebar/Sidebar.css'
 import './App.css';
 
 import { useEffect, useReducer, useState } from "react"
@@ -8,16 +14,12 @@ import { updateChapter } from "./reducers/updateChapter"
 import { updateActions } from "./reducers/updateActions"
 import { updateLocalStorage } from "./reducers/updateLocalStorage"
 
-import Modals from './components/Modals';
-import Header from "./components/Header";
-import Scale from './components/Scale';
-import Sidebar from './components/Sidebar';
-import Feed from './components/Feed';
-import Footer from './components/Footer';
-
-
-//        GO TO SECTION.JS AND FIX WHAT NEEDS FIXED       //
-
+import Modals from './components/Modals/Modals';
+import Header from "./components/Header/Header.js";
+import Scale from './components/Scale/Scale';
+import Sidebar from './components/Sidebar/Sidebar';
+import Feed from './components/Feed/Feed';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [initActions, setInitActions] = useState([])
@@ -32,7 +34,11 @@ function App() {
   useEffect(()=>{
     const pullLocalStorage = () => {
       for(let i=0; i < localStorage.length; i++){
-        setLocalStorage({type: "INIT", localData: {key: localStorage.key(i), value: localStorage.getItem(localStorage.key(i))}})
+        if(localStorage.key(i) !== "karmaScore"){
+          setLocalStorage({type: 'INIT', localData: {key: localStorage.key(i), value: JSON.parse(localStorage.getItem(localStorage.key(i)))}})
+        } else {
+          setScore({type: "INIT", score: JSON.parse(localStorage.getItem(localStorage.key(i)))})
+        }
       }
     }
     const fetchData = async () => {
@@ -49,9 +55,15 @@ function App() {
   useEffect(()=>{
     const changeLocalStorage = () => {
       localStorageState.forEach((item)=>{
-        localStorage.removeItem(item.localKey)
-        localStorage.setItem(item.localKey, item.localValue)
+        localStorage.removeItem(item.localKey);
+        localStorage.setItem(item.localKey, JSON.stringify(item.localValue))
       })
+      if(!localStorage.getItem("karmaScore")){
+        localStorage.setItem("karmaScore", score)
+      } else {
+        localStorage.removeItem("karmaScore");
+        localStorage.setItem("karmaScore", score);
+      }
     }
     changeLocalStorage()
   }, [localStorageState])
@@ -120,10 +132,10 @@ function App() {
               )
             }
           }
-          updateLocalStorage={(isChecked, chapterName, actionNumber)=>{
+          updateLocalStorage={(isChecked, chapterName, actionNumber, karmaValue, chapterKarma)=>{
             setLocalStorage(
-              isChecked ? {type: "BOX_CHECKED", chapter:{name: chapterName, itemNumber: actionNumber}}
-              : {type: "BOX_UNCHECKED", chapter:{name: chapterName, itemNumber: actionNumber}}
+              isChecked ? {type: "BOX_CHECKED", chapter:{name: chapterName, itemNumber: actionNumber, score: {initScore: score, type: chapterKarma, value: karmaValue}}}
+              : {type: "BOX_UNCHECKED", chapter:{name: chapterName, itemNumber: actionNumber, score: {initScore: score, type: chapterKarma, value: karmaValue}}}
             )
           }}
         />
