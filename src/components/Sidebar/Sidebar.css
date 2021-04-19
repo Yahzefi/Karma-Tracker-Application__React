@@ -13,6 +13,9 @@
         align-items: center;
         border-bottom: thin solid rgb(25, 25, 25);
     }
+    .sidebar-head > h2 {
+        transition: font-size 0.2s linear;
+    }
     .sidebar-content {
         display: grid;
         font-size: 28px;
@@ -24,6 +27,7 @@
     }
     .sidebar-link {
         color: grey;
+        transition: font-size 0.2s linear;
     }
     .home-link {
         font-size: 14px;
@@ -40,3 +44,18 @@
             text-decoration: underline;
         }
     
+
+@media screen and (max-width: 1700px) {
+    .sidebar-head > h2{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 955px){
+    .sidebar-link {
+        font-size: 18px;
+    }
+    .sidebar-link:first-child {
+        font-size: 12px;
+    }
+}
