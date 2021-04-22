@@ -1,7 +1,7 @@
 
 const Scale = ({ karmaStatus, currentKarma }) => {
     return (
-        <div className="scale-cont">
+        <>
             <div className="scale-num">
                 <span>0</span>
                 <span style={{paddingLeft:"22.5%"}}>25</span>
@@ -14,12 +14,10 @@ const Scale = ({ karmaStatus, currentKarma }) => {
                     <p className="scale-karma">{currentKarma}</p>
                 </div>
             </div>
-            <span className="scale-bar bar-0"></span>
             <span className="scale-bar bar-25"></span>
             <span className="scale-bar bar-50"></span>
             <span className="scale-bar bar-75"></span>
-            <span className="scale-bar bar-100"></span>
-        </div>
+        </>
     )
 }
 
