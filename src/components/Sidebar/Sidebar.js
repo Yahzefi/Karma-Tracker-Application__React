@@ -1,9 +1,10 @@
 // import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Sidebar = ({ changeChapter }) => {
+    const location = useLocation();
     return (
-        <div className="sidebar-cont">
+        <div className="sidebar-cont" style={ location.pathname === "/" ? { height: "60vh" } : {height: ""}}>
             <div className="sidebar-head">
                 <h2>CHAPTER SELECT</h2>
             </div>
