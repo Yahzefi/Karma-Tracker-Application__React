@@ -9,10 +9,10 @@ const Feed = ({ actions, chapterName, currentLocalStorage, changeScore, updateLo
         <div className="feed-cont">
             {location.pathname !== '/' &&
             <div className="item-head">
-                <h4>Number</h4>
-                <h4 style={{textAlign:"center"}}>Action Name</h4>
-                <h4 style={{textAlign:"center"}}>Location</h4>
-                <h4 style={{textAlign:"center"}}>Done?</h4>
+                <h4 className="feed-head-1">Number</h4>
+                <h4 className="feed-head-2">Action Name</h4>
+                <h4 className="feed-head-3">Location</h4>
+                <h4 className="feed-head-4">Done?</h4>
             </div>
             }
             <div className="items-cont">
