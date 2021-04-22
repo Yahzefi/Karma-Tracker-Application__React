@@ -71,3 +71,17 @@
         top: 30.75%;
     }
 }
+
+@media only screen and (max-width: 400px){
+    .scale-karma {
+        font-size: 14px;
+        padding: 4px 0;
+    }
+    .scale-box {
+        height: 25%;
+    }
+    .scale-bar {
+        height: 5%;
+        top: 31.9%;
+    }
+}
