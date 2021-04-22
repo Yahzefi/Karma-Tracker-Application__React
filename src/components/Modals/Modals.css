@@ -118,3 +118,24 @@
                 cursor: pointer;
                 background-color: lightblue;
             }
+@media only screen and (max-width: 500px){
+    .log-modal, .reg-modal {
+        width: 75%;
+        left: 10%;
+    }
+}
+@media only screen and (max-height: 900px) and (min-width: 501px){
+    .log-modal, .reg-modal {
+        width: 50%;
+        left: 22.5%;
+    }
+    .reg-msg {
+        padding-top: 10%;
+    }
+    .modal-input {
+        height: 40%;
+    }
+    .reg-submit {
+        height: 75%;
+    }
+}
