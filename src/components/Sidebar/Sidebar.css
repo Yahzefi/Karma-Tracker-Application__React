@@ -1,7 +1,8 @@
 .sidebar-cont {
     border-right: thin solid rgb(25, 25, 25);
     flex: 0.20;
-    background: linear-gradient(rgb(0, 0, 0), rgb(50, 50, 50))
+    background: linear-gradient(rgb(0, 0, 0), rgb(50, 50, 50));
+
 }
     .sidebar-head {
         display: flex;
