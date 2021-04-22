@@ -3,7 +3,7 @@
 Chapter One Locations:
 
 1) Underground Bunker
-    1a. Hall of Tranquility
+    1a. Temple of Tranquility
     1b. Stairs of Hierarchy
     1c. Deployment Center
 2) Wilson's Grotto
@@ -12,4 +12,19 @@ Chapter One Locations:
     2c. The Old Mines
     2d. Outskirts
 3) Fiendsburg
-    3a. 
+    3a. Chapel
+    3b. Canals
+    3c. The Colesseum
+4) Metro Station
+    4a. Sub-Level One
+    4b. Sub-Level Two
+    4c. The Crypt
+5) Underworld
+    5a. The Path of Exile
+    5b. The River Styx
+    5c. Halls of Hades
+6) Mount Olympus
+    6a. Entrance
+    6b. Hall of Hercules
+    6c. Hall of Hera 
+    6d. Hall of Zeus
