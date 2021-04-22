@@ -9,7 +9,6 @@ export function updateScore(state, update){
             } else if(update.karma.type === "Bad"){
                 return ( state - update.karma.value )
             }
-            console.log(state)
             return state;
         case "BOX_UNCHECKED":
             if(update.karma.type === "Good"){
@@ -20,8 +19,9 @@ export function updateScore(state, update){
             } else if(update.karma.type === "Bad"){
                 return ( state + update.karma.value )
             }
-            console.log(state)
             return state;
+        case "INIT":
+            return update.score
         default:
             return state;
     }
